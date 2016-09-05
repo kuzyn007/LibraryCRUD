@@ -59,25 +59,22 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- JSP Standard Tag Library -->
+		<!-- JSP Standard Tag Library
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-		</dependency>
-
-		<!-- <dependency>
+		</dependency> -->
+		<!-- Thymeleaf views -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency> -->
-
-		<!-- … -->
+		</dependency>
+		<!-- Tomcat -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- … -->
 
 	</dependencies>
 
