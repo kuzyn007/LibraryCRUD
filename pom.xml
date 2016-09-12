@@ -29,6 +29,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<!-- Starter for testing Spring Boot applications with libraries including 
 			JUnit, Hamcrest and Mockito -->
@@ -59,11 +60,8 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!-- JSP Standard Tag Library
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency> -->
+		<!-- JSP Standard Tag Library <dependency> <groupId>javax.servlet</groupId> 
+			<artifactId>jstl</artifactId> </dependency> -->
 		<!-- Thymeleaf views -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
