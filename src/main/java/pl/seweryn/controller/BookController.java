@@ -1,7 +1,6 @@
 package pl.seweryn.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,10 +11,7 @@ import pl.seweryn.model.Book;
 import pl.seweryn.service.BookService;
 
 @Controller
-@EnableAutoConfiguration
-
 public class BookController {
-	
 	@Autowired
 	private BookService bookService;
 	
@@ -27,24 +23,24 @@ public class BookController {
 		return "bookform";
 	}
 	
-	//Create
+	//Create & Update(save)
 	@RequestMapping(value = "book", method = RequestMethod.POST)
-    public String createBook(Book book) {
-		bookService.createBook(book);
+    public String saveBook(Book book) {
+		bookService.saveBook(book);
         return "redirect:/book/" + book.getId();
     }
 	
 	//Read
 	@RequestMapping("/book/{id}")
     public String showBook(@PathVariable Long id, Model model){
-        model.addAttribute("book", bookService.readBook(id));
+        model.addAttribute("book", bookService.getBookById(id));
         return "bookshow";
     }
 	
 	//Update
 	@RequestMapping("book/edit/{id}")
-	public String editBook(@PathVariable Long id, Model model){
-	    model.addAttribute("book", bookService.readBook(id));
+	public String edit(@PathVariable Long id, Model model){
+	    model.addAttribute("book", bookService.getBookById(id));
 	    return "bookform";
 	}
 	
@@ -56,9 +52,9 @@ public class BookController {
 	}
 	
 	//List All
-    /*@RequestMapping(value = "/books", method = RequestMethod.GET)
+	@RequestMapping(value = "/books", method = RequestMethod.GET)
     public String list(Model model){
-        model.addAttribute("books", bookService.);
-        return "products";
-    }*/
+        model.addAttribute("books", bookService.listAllBooks());
+        return "books";
+    }
 }

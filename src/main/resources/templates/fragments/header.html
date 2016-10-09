@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+
+<div class="container">
+    <div th:fragment="header">
+    
+    
+    
+        <nav class="navbar navbar-default">
+        	<a class="navbar-brand" href="#" th:href="@{/}">Seweryn Library</a>
+         
+ 
+                <div class="collapse navbar-collapse navHeaderCollapse">  
+                    <ul class="nav navbar-nav navbar-right">
+                    	<li><a href="#" th:href="@{/}">Home</a></li>
+                        <li><a href="#" th:href="@{/books}">Books</a></li>
+                        <li><a href="#" th:href="@{/book/new}">Create Book</a></li>
+                    </ul>
+                </div>
+   
+        </nav>
+        
+        
+        
+    </div>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package pl.seweryn.init;
+package pl.seweryn;
 
 
 import org.springframework.boot.SpringApplication;
@@ -12,17 +12,16 @@ import org.springframework.context.annotation.ComponentScan;
 //@EnableAutoConfiguration
 //@ComponentScan
 @SpringBootApplication // same as @Configuration @EnableAutoConfiguration @ComponentScan - alternative
-@ComponentScan("pl.seweryn")
 
-public class Application extends SpringBootServletInitializer {
+public class SpringBootWebApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+        return application.sources(SpringBootWebApplication.class);
     }
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootWebApplication.class, args);
     }
 
 }

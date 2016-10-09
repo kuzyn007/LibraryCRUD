@@ -1,10 +1,10 @@
 package pl.seweryn.dao;
  
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Component;
+
 import pl.seweryn.model.Book;
- 
-public interface BookDao {
-    public void createBook(Book book);
-    public Book readBook(Long id);
-    public void updateBook(Book book);
-    public void deleteBook(Long bookId);
+
+@Component
+public interface BookDao extends CrudRepository<Book, Long>{
 }
