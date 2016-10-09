@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Library</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+ 
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+ 
+    <link href="../static/css/library.css"
+          th:href="@{css/library.css}" rel="stylesheet" media="screen"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <img src="../static/images/background.png" width="1050"
+             th:src="@{images/background.png}"/>
+        <h1>Hello</h1>
+ 
+        <h2>Fellow Spring Framework Gurusd!!!</h2>
+    </div>
+</div>
+</body>
+</html>
