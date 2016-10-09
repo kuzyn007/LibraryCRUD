@@ -45,7 +45,7 @@ public class BookController {
 	}
 	
 	//Delete
-	@RequestMapping("product/delete/{id}")
+	@RequestMapping("book/delete/{id}")
 	public String delete(@PathVariable Long id){
 	    bookService.deleteBook(id);
 	    return "redirect:/books";
