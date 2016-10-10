@@ -39,5 +39,29 @@ public class BookLoader implements ApplicationListener<ContextRefreshedEvent> {
         bookDao.save(second);
 
         log.info("Saved second book - id:" + second.getId());
+        
+        Book third = new Book();
+        third.setIsbn("66954921");
+        third.setTitle("\"Potop\"");
+        third.setAuthor("Henryk Sienkiewicz");
+        bookDao.save(third);
+        
+        log.info("Saved third book - id:" + third.getId());
+        
+        Book fourth = new Book();
+        fourth.setIsbn("77954921");
+        fourth.setTitle("\"Spring w akcji\"");
+        fourth.setAuthor("Craig Walls");
+        bookDao.save(fourth);
+        
+        log.info("Saved fourth book - id:" + fourth.getId());
+        
+        Book fifth = new Book();
+        fifth.setIsbn("93254123");
+        fifth.setTitle("\"Java. Podstawy. Wydanie IX\"");
+        fifth.setAuthor("Cay S. Horstmann, Gary Cornell");
+        bookDao.save(fifth);
+        
+        log.info("Saved fifth book - id:" + fifth.getId());
     }
 }
